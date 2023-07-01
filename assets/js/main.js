@@ -136,20 +136,6 @@
   /**
    * Scrool with ofset on links with a class name .scrollto
    */
-  on('click', '.scrollto', function(e) {
-    if (select(this.hash)) {
-      e.preventDefault()
-
-      let navbar = select('#navbar')
-      if (navbar.classList.contains('navbar-mobile')) {
-        navbar.classList.remove('navbar-mobile')
-        let navbarToggle = select('.mobile-nav-toggle')
-        navbarToggle.classList.toggle('bi-list')
-        navbarToggle.classList.toggle('bi-x')
-      }
-      scrollto(this.hash)
-    }
-  }, true)
 
   /**
    * Scroll with ofset on page load with hash links in the url
@@ -268,19 +254,19 @@
 function changeText(filterItem) {
   console.log(filterItem);
   if (filterItem === 'han'){
-    document.getElementById("activity").innerHTML = "Ngoài những đường hàn gắn kết các chi tiết lại với nhau đòi hỏi trình độ kỷ thuật cao, chúng tôi luôn tạo ra những đường hàn chất lượng và sắc nét trong từng sản phẩm đáp ứng được sự hài lòng nhất từ khách hàng.";
+    document.getElementById("activity").innerHTML = "Với nhiều năm kinh nghiệm học tập và làm việc tại nhật bản, Công Ty Tnhh Cơ Khí JCK của chúng tôi không ngừng đào tạo, cải tiến, nâng cao và học hỏi để tạo ra những đường hàn chất lượng và đẹp mắt trong từng sản phẩm, Công Ty chúng tôi chuyên Hàn bồn vi sinh, bồn hóa chất, bồn chứa nước, bồn nấu gia nhiệt ,bồn trộn, bồn khí, ngoài ra chúng tôi còn Hàn các đường ống dẫn khí ,dẫn nước và nhiều sản phẩm khung, kệ inox củng như cacbon trong nhiều lĩnh vực cơ khí... với những sản phẩm củng như đường hàn của chúng tôi tạo ra, khách hàng luôn nhận được sự hài lòng nhất từ phía  Công Ty chúng tôi .";
   }
   else if (filterItem === 'bong'){
-    document.getElementById("activity").innerHTML = "Các sản phẩm trong nghành công nghiệp thực phẩm hoặc nghành dược luôn đòi hỏi kỷ thuật ,chất lượng củng như độ tỉ mỉ cao bởi vì thế công nghệ đánh bóng của chúng tôi luôn tạo ra sản phẩm đẹp và sắc nét nhất.";
+    document.getElementById("activity").innerHTML = "Trong quá trình gia công và chế tạo các bề mặt inox thường hay bị trầy xước và không đồng bộ bề mặt với nhau, thì giải pháp đánh bóng và sử lý các bề mặt được tạo ra để tăng thêm tính thẩm mỹ cho sản phẩm, tùy theo nhu cầu của khách hàng và độ bóng khác nhau như đánh bóng 2 line và độ bóng như gương (#400) với đội ngủ nhân viên tay nghề cao, Công Ty chúng tôi luôn đào tạo và  đặt ra quy trình đánh bóng  khắc khe nhất để tạo  những sản phẩm đẹp và sắc nét nhất, đáp ứng được sự hài lòng từ khách hàng khó tính nhất, hảy liên hệ Công Ty Tnhh Cơ Khí JCK để được tư vấn và hổ trợ tận tình nhất .";
   }
-  else if (filterItem === 'cau'){
-    document.getElementById("activity").innerHTML = "Không chỉ gia công các đường ống ,bồn công nghiệp ngoài ra chúng tôi còn nhận đánh bóng các linh kiện inox, lắp đặt các hệ thống trong công nghiệp theo yêu cầu của khách hàng.";
+  else if (filterItem === 'ong'){
+    document.getElementById("activity").innerHTML = "Ngoài nhận thi công các đường ống tại nhà xưởng, chúng tôi còn nhận thi công và lắp đặt các đường ống ngoài công trình như Inox 304, Inox 316, Cabon, ống nhựa PPR, củng như các đường ống chịu áp lực ...nhằm kết nối lại các hệ thống lại với nhau sao cho hoàn chỉnh, Công Ty chúng tôi không ngừng trao dồi và học hỏi luôn tìm ra giải pháp tối ưu nhất nhằm cắt giảm những chi phí không cần thiết cho khách hàng, với nhiều năm kinh nghiệm thi công đường cho các Công Ty nước ngoài tại Việt  Nam, Công Ty chúng tôi luôn nhận được sự quan tâm và tin tưởng từ phía khách hàng bởi uy tín và chất lượng của sản phẩm tạo ra.    ";
   }
-  else if (filterItem === 'trinh'){
-    document.getElementById("activity").innerHTML = "Với nhiều năm kinh nghiệm thi công tại công trình chúng tôi luôn đáp ứng được mọi yêu cầu của khách hàng đề ra để đảm bảo được tiến độ thi công củng như lắp đặt, sửa chữa, bảo trì cho hệ thống công nghiệp.";
+  else if (filterItem === 'inox'){
+    document.getElementById("activity").innerHTML = "Là đơn vị nhiều năm kinh nghiệm trong lĩnh vực gia công bồn inox, gia công bồn trộn, gia công bồn công nghiệp, gia công bồn khuấy, gia công bồn gia nhiệt, …chúng tôi luôn luôn sáng tạo không ngừng thiết kế các mẫu bồn mới và theo yêu cầu của khách hàng . Tùy theo nhu cầu sử dụng và dung dịch cần chứa đựng khác nhau và yêu cầu của khách hàng, mà công ty chúng tôi đưa ra thiết kế phù hợp với những kích thước và ứng dụng khác nhau nhằm đáp ứng cho các nhu cầu chế biến thực phẩm, sử lý nước thải, củng như chứa đựng và sử dụng cho nhiều tính năng khác nhau trong nghành công nghiệp thực phẩm củng như hóa chất.";
   }
-  else if (filterItem === 'dien'){
-    document.getElementById("activity").innerHTML = "Các sản phẩm hệ thống điện của chúng tôi luôn luôn được khách hàng lựa chọn bởi vì chất lượng củng như tính thẩm mỹ cao .";
+  else if (filterItem === 'nghiep'){
+    document.getElementById("activity").innerHTML = "Để đảm bảo cho nghành sản xuất phát triển ngoài việc không ngừng đổi mới cải tiến trang thiết bị, máy móc, và kỷ thuật, thì việc bảo trì hệ thống công nghiệp để đảm bảo hệ thống sản xuất vận hành là một hoạt động trọng yếu ,trong quá trình sử dụng lâu dài máy móc thiết bị củng như hệ thống trở nên hư hỏng và suy yếu ảnh hưởng đến tiến độ và sản xuất  của xí nghiệp, vì vậy việc bảo trì thường xuyên và đúng định kỳ sẻ đem lại nhiều lợi ích hiệu quả như : tăng tuổi thọ cho máy móc thiết bị ,giảm chi phí thay thế , nâng cao năng xuất, tăng tính an toàn, giúp hệ thống máy móc vận hành tốt hơn, với đội ngủ kỷ sư tay nghề cao nhiều năm kinh nghiệm, Công ty chúng tôi luôn đề ra những ý kiến, phương pháp tối ưu  giúp cho xí nghiệp, nhà máy  khắc phục những hệ thống, máy móc thiết bị suy yếu tăng khả năng vận hành củng như sản xuất cho các xí nghiệp được tốt nhất. ";
   }
   else{
     document.getElementById("activity").innerHTML = ''
