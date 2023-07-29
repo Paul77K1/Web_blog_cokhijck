@@ -1545,3 +1545,9 @@ section {
   z-index: 1;
 }
 
+.form-group{
+  padding-bottom: 3%;
+}
+.btn-contact{
+  width: 100%;
+}
