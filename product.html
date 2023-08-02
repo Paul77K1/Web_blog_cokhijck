@@ -61,7 +61,7 @@
         let phone = document.getElementById('phone').value
         let email = document.getElementById('email').value
         let message = document.getElementById('message').value
-        let payload_email = `Khách hàng có tên: ${name} , có số điện thoại: ${phone}, email: ${email}, với lời nhắn: ${message} cần được tư vấn báo giá.`
+        let payload_email = `Khách hàng có tên: ${name} , có số điện thoại: ${phone}, email: ${email}, với lời nhắn: ${message}`
 
         if (name && phone && email){
             Email.send({
@@ -71,11 +71,14 @@
             Subject: "This is the subject",
             Body: payload_email
           }).then(
-            message => alert(message)
+            message => console.log(message)
           );
 
         }
-        
+        document.getElementById('name').value = ''
+        document.getElementById('phone').value = ''
+        document.getElementById('email').value = ''
+        document.getElementById('message').value = ''
       }
     </script>
     <!-- =======================================================
