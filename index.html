@@ -53,6 +53,30 @@
           alert("Image downloading is not allowed");
         });
     </script>
+    <script src="https://smtpjs.com/v3/smtp.js"> </script>
+    <script>
+      function sendMail() {
+        let name = document.getElementById('name').value
+        let phone = document.getElementById('phone').value
+        let email = document.getElementById('email').value
+        let message = document.getElementById('message').value
+        let payload_email = `Khách hàng có tên: ${name} , có số điện thoại: ${phone}, email: ${email}, với lời nhắn: ${message} cần được tư vấn báo giá.`
+
+        if (name && phone && email){
+            Email.send({
+            SecureToken: "1c2aae1d-bfe7-4113-889f-08b3e03b35db",
+            To: 'KenNiceru6422@gmail.com',
+            From: "kenniceru6422@gmail.com",
+            Subject: "This is the subject",
+            Body: payload_email
+          }).then(
+            message => alert(message)
+          );
+
+        }
+        
+      }
+    </script>
     <!-- =======================================================
   * Template Name: Green - v4.10.0
   * Template URL: https://bootstrapmade.com/green-free-one-page-bootstrap-template/
@@ -323,7 +347,7 @@
             </p>
           </div>
 
-          <form>
+          <form method="post">
             <div class="form-group">
               <label for="name">Name:</label>
               <input type="text" class="form-control" id="name" name="name" required>
@@ -331,7 +355,7 @@
             
             <div class="form-group">
               <label for="name">Phone:</label>
-              <input type="number" class="form-control" id="name" name="name" required>
+              <input type="number" class="form-control" id="phone" name="name" required>
             </div>
 
             <div class="form-group">
@@ -343,8 +367,7 @@
               <label for="message">Message:</label>
               <textarea class="form-control" id="message" name="message" rows="5"></textarea>
             </div>
-      
-            <button class="btn btn-contact btn-success">Save</button>
+            <input class="btn btn-contact btn-success" type="button" value="Save" onclick="sendMail()">
           </form>
         </div>
       </section>
