@@ -1458,15 +1458,15 @@ section {
   color: red !important;
 }
 .jck span:nth-child(1) {
-  color: #2e3192 !important;
+  color: rgb(46 49 146) !important;
 }
 
 .jck span:nth-child(2) {
-  color: #ef1d1c !important;
+  color: rgb(239 29 28) !important;
 }
 
 .jck span:nth-child(3) {
-  color: #2e3192 !important;
+  color: rgb(46 49 146) !important;
 }
 
 
